@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project name="Hw2Soft" default="Hw2Soft">
-<target name="compile" depends="compileP">
 <path id="NecessaryLibraries">
         <pathelement location="./UsedLibraries/junit-4.12.jar"/>
         <!--matcher-->
@@ -9,6 +7,7 @@
     </path>
     
         
+       <target name="compile-testcases" depends="compile">
         <mkdir dir="${result.testclasses.dir}"/>
         <javac srcdir="${src.test.dir}"  destdir="${result.testclasses.dir}" debug="true" includeantruntime="false">
             <classpath>
