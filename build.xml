@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="." default="compile">
+<project basedir="." default="build" name="SoftHw2">
 <property name="compile" value="compile" />
+<property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../eclipse/"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+<property name="source" value="1.8"/>
 <path id="NecessaryLibraries">
         <pathelement location="${ECLIPSE_HOME}plugins/org.junit.jupiter.api_5.0.0.v20170910-2246.jar"/>
         <pathelement location="${ECLIPSE_HOME}plugins/org.junit.jupiter.engine_5.0.0.v20170910-2246.jar"/>
@@ -17,8 +23,10 @@
         <pathelement location="${ECLIPSE_HOME}plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
         <pathelement location="${ECLIPSE_HOME}plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
     </path>
-    
-        
+    <path id="SoftHw2.classpath">
+        <pathelement location="bin"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+</path>
     <target name="compile-testcases" depends="compile">
         <mkdir dir="${result.testclasses.dir}"/>
         <javac srcdir="${src.test.dir}"  destdir="${result.testclasses.dir}" debug="true" includeantruntime="false">
