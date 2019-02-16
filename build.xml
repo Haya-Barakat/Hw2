@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Hw2Soft" default="Hw2Soft">
-<target name="compile-testcases" depends="compile">
+<target name="compile" depends="compile">
 <path id="NecessaryLibraries">
         <pathelement location="./UsedLibraries/junit-4.12.jar"/>
         <!--matcher-->
