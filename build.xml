@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="test" default="Hw2Soft">
-<property name="src.dir" value="src" />
-<property name="build.dir" value="build" />
-<property name="classes.dir" value="${build.dir}/classes" />
-<property name="jar.dir" value="${build.dir}/jar" />
-<property name="main-class" value="sample.Sample" />
-
-<target name="clean">
-    <delete dir="${classes.dir}" />
-</target>
+<project basedir="." default="compile">
+<property name="compile" value="compile" />
+<property name="src" value="." />
+<property name="lib" value="lib" />
 
 <path id="NecessaryLibraries">
         <pathelement location="./UsedLibraries/junit-4.12.jar"/>
@@ -46,4 +40,3 @@
             
         </junit>
     </target>
-    </project>
