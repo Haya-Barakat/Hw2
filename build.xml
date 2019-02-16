@@ -1,10 +1,24 @@
-<path id="NecessaryLibraries">
-        <pathelement location="./UsedLibraries/junit-4.12.jar"/>
-        <!--matcher-->
-        <pathelement location="./UsedLibraries/hamcrest-core-1.3.jar"/>
-        <!--<pathelement location="./UsedLibraries/jacocoant.jar"/>-->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <path id="JUnit 5.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit.jupiter.api_5.0.0.v20170910-2246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit.jupiter.engine_5.0.0.v20170910-2246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit.jupiter.migrationsupport_5.0.0.v20170910-2246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit.jupiter.params_5.0.0.v20170910-2246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit.platform.commons_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit.platform.engine_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit.platform.launcher_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit.platform.runner_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit.platform.suite.api_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit.vintage.engine_4.12.0.v20170910-2246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.opentest4j_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apiguardian_1.0.0.v20170910-2246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
     </path>
-    
+    <path id="SoftHw2.classpath">
+        <pathelement location="bin"/>
+        <path refid="JUnit 5.libraryclasspath"/>
+</path>
        <target name="compile-testcases" depends="compile">
         <mkdir dir="${result.testclasses.dir}"/>
         <javac srcdir="${src.test.dir}"  destdir="${result.testclasses.dir}" debug="true" includeantruntime="false">
