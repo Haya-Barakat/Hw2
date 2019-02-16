@@ -25,7 +25,7 @@
     </path>
     <path id="SoftHw2.classpath">
         <pathelement location="bin"/>
-        <path refid="JUnit 5.libraryclasspath"/>
+        <path refid="NecessaryLibraries"/>
 </path>
     <target name="compile-testcases" depends="compile">
         <mkdir dir="${result.testclasses.dir}"/>
