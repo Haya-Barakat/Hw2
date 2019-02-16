@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="compile" default="compile">
+<project name="." default="compile">
+<property name="compile" value="compile" />
 <path id="NecessaryLibraries">
         <pathelement location="${ECLIPSE_HOME}plugins/org.junit.jupiter.api_5.0.0.v20170910-2246.jar"/>
         <pathelement location="${ECLIPSE_HOME}plugins/org.junit.jupiter.engine_5.0.0.v20170910-2246.jar"/>
